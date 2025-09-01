@@ -2,7 +2,10 @@ name: Deploy frontend to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main"] # adjust if your default branch is not "main"
+
+permissions:
+  contents: write # 👈 allows the bot to push to gh-pages
 
 jobs:
   build:
